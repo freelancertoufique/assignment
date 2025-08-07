@@ -41,7 +41,7 @@ class Course:
         self.course_code = course_code
         self.instructor = instructor
         self.students = []
-    def add_student(self, student_id):
+    def add_student(self, student_id: str):
         if student_id not in self.students:
             self.students.append(student_id)
     def display_course_info(self,student_dict):
