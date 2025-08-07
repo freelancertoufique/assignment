@@ -14,6 +14,14 @@ class Student(Person):
         self.grades = {}
         self.courses = []
     def add_grade(self, subject, grade):
-        if self.student_id not in self.grades:
-            print('Student Id not found.')
-            return
+        self.grades[subject] = grade
+    def enroll_course(self,course_name):
+        if self.course_name not in self.courses:
+            self.courses.append(course_name)
+    def display_student_info(self):
+        self.person_info()
+        print(f'Student id: {self.student_id}')
+        print(f'Enrolled coures: {",".join(self.courses) if self.courses else "None"}')
+        print(f'Grades: {self.Grades if self.grades else "None"}')
+        
+        
